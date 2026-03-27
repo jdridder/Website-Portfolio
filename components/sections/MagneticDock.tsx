@@ -1,9 +1,8 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useSpring } from "framer-motion";
 import { useMagnetic } from "@/hooks/useMagnetic";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
+import { motion, useSpring } from "framer-motion";
 
 const NAV_ITEMS = [
   { label: "Hero",      icon: "◎", href: "#hero" },
@@ -70,7 +69,7 @@ function MagneticDockItem({
 export function MagneticDock() {
   return (
     <motion.nav
-      className="fixed bottom-8 left-1/2 z-50 -translate-x-1/2"
+      className="fixed top-8 left-8 z-50"
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 1.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}

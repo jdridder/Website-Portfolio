@@ -11,8 +11,17 @@ import { FloatingCard } from "@/components/ui/FloatingCard";
 import { useGravity } from "@/hooks/useGravity";
 import { motion } from "framer-motion";
 
+type BentoCell = {
+  col: 1 | 2 | 3 | 4;
+  row: 1 | 2;
+  title: string;
+  content: string | string[];
+  type: "tags" | "stat" | "text";
+  sub?: string;
+};
+
 // Skill matrix — populated from Jan-David Ridder's CV
-const BENTO_CELLS = [
+const BENTO_CELLS: BentoCell[] = [
   {
     col: 2 as const,
     row: 1 as const,
@@ -99,9 +108,11 @@ export default function Home() {
                     >
                       {cell.content as string}
                     </p>
-                    <p className="font-inter text-xs text-muted mt-2">
-                      {cell.sub}
-                    </p>
+                    {cell.sub && (
+                      <p className="font-inter text-xs text-muted mt-2">
+                        {cell.sub}
+                      </p>
+                    )}
                   </div>
                 )}
 
