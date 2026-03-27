@@ -178,12 +178,12 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <FloatingCard gravityOn={gravityOn} className="inline-flex">
               <a
-                href="mailto:jan-david.ridder@waspaero.de"
+                href="mailto:jandavid.ridder@waspaero.de"
                 className="font-grotesk text-lg font-semibold tracking-wide flex items-center gap-3"
                 style={{ color: "var(--primary)" }}
               >
                 <span>◈</span>
-                jan-david.ridder@waspaero.de
+                jandavid.ridder@waspaero.de
               </a>
             </FloatingCard>
             <FloatingCard gravityOn={gravityOn} className="inline-flex">
