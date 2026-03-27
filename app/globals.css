@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f6f6f6;
+  --primary: #003254;
+  --accent: #F26101;
+  --glow: rgba(144, 189, 212, 0.15);
+  --glow-strong: rgba(144, 189, 212, 0.35);
+  --border: rgb(116, 118, 119);
+  --text-muted: rgba(0, 0, 0, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg);
+  color: var(--primary);
+  font-family: var(--font-inter), sans-serif;
+  min-height: 100vh;
+}
+
+/* Grid overlay — fades to edges via radial mask */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: linear-gradient(
+      rgba(144, 189, 212, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(144, 189, 212, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  -webkit-mask-image: radial-gradient(
+    ellipse 80% 70% at 50% 50%,
+    white 25%,
+    transparent 78%
+  );
+  mask-image: radial-gradient(
+    ellipse 80% 70% at 50% 50%,
+    white 25%,
+    transparent 78%
+  );
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 2px;
+  opacity: 0.4;
+}
+
+/* Glass morphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+}
+
+/* Glow text */
+.text-glow {
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.25), 0 0 40px rgba(144, 189, 212, 0.1);
+}
+
+/* SVG path animation */
+.timeline-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
