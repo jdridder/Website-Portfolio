@@ -37,12 +37,11 @@ const BENTO_CELLS: BentoCell[] = [
     type: "tags",
   },
   {
-    col: 4 as const,
+    col: 3 as const,
     row: 1 as const,
-    title: "Current Focus",
-    content:
-      "Physics-consistent surrogate models with uncertainty quantification for model predictive control — combining conformalized quantile regression, custom PyTorch architectures, and IPOPT-based MPC to control a load-flexible packed bed reactor.",
-    type: "text",
+    title: "Languages",
+    content: ["German – native", "English – native-level", "Spanish – basic", "Latin – great Latinum proficiency"],
+    type: "tags",
   },
 ];
 
@@ -195,6 +194,28 @@ export default function Home() {
               >
                 <span style={{ color: "var(--primary)" }}>⬡</span>
                 waspaero.de
+              </a>
+            </FloatingCard>
+            <FloatingCard gravityOn={gravityOn} className="inline-flex">
+              <a
+                href="https://www.linkedin.com/in/jan-david-ridder-86035218b/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-grotesk text-base font-medium tracking-wide flex items-center gap-3 text-muted"
+              >
+                <span style={{ color: "var(--primary)" }}>⬡</span>
+                LinkedIn
+              </a>
+            </FloatingCard>
+            <FloatingCard gravityOn={gravityOn} className="inline-flex">
+              <a
+                href="https://github.com/jdridder"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-grotesk text-base font-medium tracking-wide flex items-center gap-3 text-muted"
+              >
+                <span style={{ color: "var(--primary)" }}>⬡</span>
+                GitHub
               </a>
             </FloatingCard>
           </div>

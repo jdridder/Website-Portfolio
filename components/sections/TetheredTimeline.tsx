@@ -1,8 +1,8 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { FloatingCard } from "@/components/ui/FloatingCard";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const TIMELINE_ITEMS = [
   {
@@ -34,7 +34,7 @@ const TIMELINE_ITEMS = [
     title: "Data Engineering Intern",
     institution: "Evonik Industries · Marl",
     description:
-      "Digital-twin heat pump simulations in Aspen Plus. Built a Python–Aspen API. Performed black-box process optimisation via Bayesian optimisation. Open-source contribution to the BoFire ML library (polytope sampler for design of experiments). Company-wide final presentation to process engineering staff.",
+      "Digital-twin heat pump simulations in Aspen Plus. Built a Python–Aspen API. Performed black-box process optimization via Bayesian optimization. Open-source contribution to the BoFire ML library (polytope sampler for design of experiments). Company-wide final presentation to process engineering staff.",
     tag: "Industry",
   },
   {
@@ -50,7 +50,7 @@ const TIMELINE_ITEMS = [
     title: "Research Assistant",
     institution: "Chair of Reaction Engineering & Catalysis · TU Dortmund",
     description:
-      "Macro-kinetics modeling and OCFE diffusion simulation (building on B.Sc. thesis). Bayesian optimisation of flow reactor CFD simulations — published as open-source on GitHub. Built a simulation data pipeline. Kinetic parameter fitting for a Berty reactor under GC measurement uncertainty.",
+      "Macro-kinetics modeling and OCFE diffusion simulation (building on B.Sc. thesis). Bayesian optimization of flow reactor CFD simulations — published as open-source on GitHub. Built a simulation data pipeline. Kinetic parameter fitting for a Berty reactor under GC measurement uncertainty.",
     tag: "Research",
   },
   {

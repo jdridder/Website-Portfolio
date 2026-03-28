@@ -69,14 +69,17 @@ function MagneticDockItem({
 export function MagneticDock() {
   return (
     <motion.nav
-      className="fixed top-8 left-8 z-50"
-      initial={{ y: 100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
+      // 1. Positionierung: Rechts (right-8), Vertikal zentriert (top-1/2 & -translate-y-1/2)
+      className="fixed right-8 top-1/2 z-50"
+      // 2. Animation: Kommt von rechts (x: 100) statt von unten
+      initial={{ x: 100, y:"-50%", opacity: 0 }}
+      animate={{ x: 0, y:"-50%", opacity: 1 }}
       transition={{ delay: 1.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       aria-label="Site navigation"
     >
       <div
-        className="glass flex items-end gap-6 px-8 py-4 rounded-3xl"
+        // 3. Layout: flex-col für vertikale Stapelung, items-center für die Ausrichtung
+        className="glass flex flex-col items-center gap-6 py-8 px-4 rounded-3xl"
         style={{
           boxShadow: "0 0 30px var(--glow), 0 0 1px var(--border)",
         }}
